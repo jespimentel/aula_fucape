@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Material da aula ministrada na FUCAPE sobre transcrição de audiências e análise de dados judiciais com IA e Python." /><meta name="author" content="José Eduardo de Souza Pimentel" /><link rel="canonical" href="https://jespimentel.github.io/aula_fucape/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/aula_fucape/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#agenda">Agenda</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transcricao-de-audiencias-judiciais">Transcrição de audiências judiciais</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ffmpeg">FFmpeg</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comandos-uteis">Comandos úteis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#word-online">Word online</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#passo-final-ajustes-com-ia">Passo final: ajustes com IA</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#analise-de-dados-da-api-do-datajud">Análise de dados da API do DataJud</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#visao-geral">Visão geral</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#busca-com-elasticsearch">Busca com Elasticsearch</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referencias">Referências</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="o-poder-de-ia-e-do-python-na-coleta-e-tratamento-de-dados-judiciais">O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais</h1>
+<hr />
+<h2 id="agenda">Agenda</h2>
+<ul>
+<li>Transcrição de audiências judiciais</li>
+<li>Análise de dados da API do DataJud</li>
+</ul>
+<hr />
+<h2 id="transcricao-de-audiencias-judiciais">Transcrição de audiências judiciais</h2>
+<ul>
+<li>Por que automatizar a transcrição?</li>
+<li>Pipeline com FFmpeg + Word Online + Chat de IA</li>
+</ul>
+<hr />
+<h3 id="ffmpeg">FFmpeg</h3>
+<ul>
+<li>Baixar e instalar a versão portátil</li>
+<li>Mover a pasta para local de preferência</li>
+<li>Editar Path (variáveis de ambiente) apontando para o executável da pasta "bin"</li>
+<li>Testar</li>
+</ul>
+<hr />
+<h3 id="comandos-uteis">Comandos úteis</h3>
+<ul>
+<li>De "asf" para "mp4":
+<code>ffmpeg -i arquivo_original.asf arquivo_modificado.mp4</code></li>
+<li>De "asf" para "mp3":
+<code>ffmpeg -i arquivo_original.asf -vn arquivo_modificado.mp3</code></li>
+<li>Segmentando os primeiros 10 minutos de um vídeo:
+<code>ffmpeg -i arquivo_original.asf -t 00:10:00 parte_1.asf</code></li>
+<li>Segmentando dos 10 aos 20 minutos de um vídeo:
+<code>ffmpeg -i arquivo_original.asf -ss 00:10:00 -t 00:20:00 parte_2.asf</code></li>
+<li><a href="ffmpeg_cheat_sheet.pdf">Cheat Sheet</a></li>
+</ul>
+<hr />
+<h3 id="word-online">Word online</h3>
+<ul>
+<li>Arquivos suportados: <code>.wav</code>, <code>.mp4</code>, <code>.m4a</code>, <code>.mp3</code></li>
+<li>Identificação/edição dos palestrantes</li>
+<li>Opções de carimbo e data/hora</li>
+<li>Vínculo com o arquivo original (parsta <code>Meus Arquivos\Arquivos Transcritos</code>)</li>
+<li>Solução alternativa: <strong>Whisper</strong> (modelo local)</li>
+</ul>
+<hr />
+<h3 id="passo-final-ajustes-com-ia">Passo final: ajustes com IA</h3>
+<p><strong>Exemplo de prompt</strong></p>
+<pre><code class="language-markdown">
+# Tarefa
+
+Transcreva o(s) depoimentos(s) fornecidos abaixo em forma discursiva e direta, ou seja, transforme-os em narrativas, uma para cada depoente.
+
+# Formato de saída esperado
+
+**Exemplo**
+A vítima Maria da Silva contou que, em novembro de 2020, deixou o carro no estacionamento do réu. Acordaram que ele o venderia por 60 mil. O acusado avisou que vendeu o carro para Renata. Ela ficou com o carro mesmo não tendo transferido o carro para ela. Ela não pagou em dezembro, nem em janeiro, apesar de conversarem. Acordaram datas e ele não cumpriu. Ficou com o recibo. Consultando o carro, viu que ele estava alienado. Eles conseguiram fazer o financiamento, sem que o depoente tivesse assinado. O réu chegou a pagar 10 mil reais. Em fevereiro, arrumou um advogado, fez uma notificação e entrou com ação. O contrato era bem claro: vender o carro do depoente e entregar o valor. Por isso se sentiu lesada.   
+**Fim do Exemplo**
+
+# Instruções especiais
+- Proceda assim com todos os depoimentos contidos na transcrição.
+- Não omita informações. Escreva tudo o que foi dito. 
+- Omita, porém, as perguntas do juiz, do promotor e do advogado, deixando as respostas fluidas e na forma de depoimento contínuo, como no exemplo. 
+</code></pre>
+<hr />
+<h2 id="analise-de-dados-da-api-do-datajud">Análise de dados da API do DataJud</h2>
+<h3 id="visao-geral">Visão geral</h3>
+<ul>
+<li>O que é uma API?</li>
+<li>A API do CNJ: </li>
+<li>metadados e movimentações dos processos judiciais não gravados de sigilo. </li>
+<li>Consultas com <strong>Elasticsearch</strong> (motor de busca orientado a JSON)</li>
+</ul>
+<hr />
+<h3 id="busca-com-elasticsearch">Busca com Elasticsearch</h3>
+<ul>
+<li>Blocos: <code>size</code>, <code>query</code> e <code>search</code> (opicionais)</li>
+</ul>
+<pre><code class="language-markdown">{
+  &quot;size&quot;: 10,
+  &quot;query&quot;: {
+    &quot;bool&quot;: {
+      &quot;must&quot;: [
+        { &quot;match&quot;: { &quot;nome_do_campo_1&quot;: &quot;valor_procurado&quot; } },
+        { &quot;match&quot;: { &quot;nome_do_campo_2&quot;: &quot;outro_valor&quot; } }
+      ]
+    }
+  },
+  &quot;sort&quot;: [
+    { &quot;campo_data&quot;: { &quot;order&quot;: &quot;desc&quot; } }
+  ]
+}
+</code></pre>
+<ul>
+<li><a href="datajud_cheat_sheet.pdf">Cheat Sheet</a></li>
+</ul>
+<hr />
+<h2 id="referencias">Referências</h2>
+<ul>
+<li><a href="https://www.cnj.jus.br/sistemas/datajud/api-publica/">API pública do Datajud</a></li>
+<li><a href="https://jespimentel.blogspot.com/2025/11/ffmpeg-para-manipulacao-de-arquivos-de.html">Blog</a></li>
+<li><a href="https://brazilvisible.org/docs/apis/poder-judiciario-cnj/datajud/">Brazilvisible.org</a></li>
+<li><strong>Pimentel</strong>, José Eduardo de Souza. <a href="https://medium.com/@pimentel.jes/por-que-promotores-de-justi%C3%A7a-deveriam-conhecer-o-python-26c9c7860f43">Por que promotores de justiça deveriam conhecer o Python?</a></li>
+<li><a href="https://github.com/jespimentel/aula_fucape/blob/main/transcricao_ffmpeg_whisper.ipynb">Colab da transcrição</a></li>
+<li><a href="https://github.com/jespimentel/aula_fucape/blob/main/datajud_tjma.ipynb">Colab da API do Datajud</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>José Eduardo de Souza Pimentel</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-06-21 21:18:42.358367+00:00
+-->
