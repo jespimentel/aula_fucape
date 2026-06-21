@@ -23,7 +23,7 @@
 `ffmpeg -i arquivo_original.asf -t 00:10:00 parte_1.asf`
 - Segmentando dos 10 aos 20 minutos de um vídeo:
 `ffmpeg -i arquivo_original.asf -ss 00:10:00 -t 00:20:00 parte_2.asf`
-- Mais sobre FFmpeg no meu [blog](https://jespimentel.blogspot.com/2025/11/ffmpeg-para-manipulacao-de-arquivos-de.html)
+- [Cheat Sheet](docs\ffmpeg_cheat_sheet.pdf)
 ---
 ### Word online
 - Arquivos suportados: `.wav`, `.mp4`, `.m4a`, `.mp3`
@@ -77,8 +77,14 @@ A vítima Maria da Silva contou que, em novembro de 2020, deixou o carro no esta
   ]
 }
 ```
+
+- [Cheat Sheet](docs\datajud_cheat_sheet.pdf)
+
 ---
 ## Referências
 - [API pública do Datajud](https://www.cnj.jus.br/sistemas/datajud/api-publica/)
+- [Blog](https://jespimentel.blogspot.com/2025/11/ffmpeg-para-manipulacao-de-arquivos-de.html)
 - [Brazilvisible.org](https://brazilvisible.org/docs/apis/poder-judiciario-cnj/datajud/)
-- Pimentel, José Eduardo de Souza. [Por que promotores de justiça deveriam conhecer o Python?](https://medium.com/@pimentel.jes/por-que-promotores-de-justi%C3%A7a-deveriam-conhecer-o-python-26c9c7860f43)
+- **Pimentel**, José Eduardo de Souza. [Por que promotores de justiça deveriam conhecer o Python?](https://medium.com/@pimentel.jes/por-que-promotores-de-justi%C3%A7a-deveriam-conhecer-o-python-26c9c7860f43)
+- [Colab da transcrição]()
+- [Colab da API do Datajud]()

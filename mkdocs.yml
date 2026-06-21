@@ -1,4 +1,6 @@
 site_name: José Eduardo de Souza Pimentel  Jun. 2026
 
+site_url: https://jespimentel.github.io/aula_fucape/
+
 theme:
   name: readthedocs
