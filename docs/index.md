@@ -34,6 +34,7 @@
 ---
 ### Passo final: ajustes com IA
 **Exemplo de prompt**
+
 ```markdown
 
 # Tarefa
@@ -86,5 +87,5 @@ A vítima Maria da Silva contou que, em novembro de 2020, deixou o carro no esta
 - [Blog](https://jespimentel.blogspot.com/2025/11/ffmpeg-para-manipulacao-de-arquivos-de.html)
 - [Brazilvisible.org](https://brazilvisible.org/docs/apis/poder-judiciario-cnj/datajud/)
 - **Pimentel**, José Eduardo de Souza. [Por que promotores de justiça deveriam conhecer o Python?](https://medium.com/@pimentel.jes/por-que-promotores-de-justi%C3%A7a-deveriam-conhecer-o-python-26c9c7860f43)
-- [Colab da transcrição]()
-- [Colab da API do Datajud]()
+- [Colab da transcrição](https://github.com/jespimentel/aula_fucape/blob/main/transcricao_ffmpeg_whisper.ipynb)
+- [Colab da API do Datajud](https://github.com/jespimentel/aula_fucape/blob/main/datajud_tjma.ipynb)
