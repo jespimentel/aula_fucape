@@ -1,3 +1,7 @@
+---
+title: O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais
+description: Material da aula ministrada na FUCAPE sobre transcrição de audiências e análise de dados judiciais com IA e Python.
+---
 # O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais
 ---
 ## Agenda

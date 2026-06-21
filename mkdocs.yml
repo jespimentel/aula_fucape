@@ -1,6 +1,10 @@
-site_name: José Eduardo de Souza Pimentel  Jun. 2026
+site_name: O Poder de IA e do Python na Coleta e Tratamento de Dados Judiciais
 
 site_url: https://jespimentel.github.io/aula_fucape/
+
+site_description: Material da aula ministrada na FUCAPE sobre transcrição de audiências e análise de dados judiciais com IA e Python.
+
+site_author: José Eduardo de Souza Pimentel
 
 theme:
   name: readthedocs
