@@ -6,5 +6,7 @@ site_description: Material da aula ministrada na FUCAPE sobre transcrição de a
 
 site_author: José Eduardo de Souza Pimentel
 
+copyright: José Eduardo de Souza Pimentel
+
 theme:
   name: readthedocs
