@@ -23,7 +23,7 @@
 `ffmpeg -i arquivo_original.asf -t 00:10:00 parte_1.asf`
 - Segmentando dos 10 aos 20 minutos de um vídeo:
 `ffmpeg -i arquivo_original.asf -ss 00:10:00 -t 00:20:00 parte_2.asf`
-- [Cheat Sheet](docs\ffmpeg_cheat_sheet.pdf)
+- [Cheat Sheet](ffmpeg_cheat_sheet.pdf)
 ---
 ### Word online
 - Arquivos suportados: `.wav`, `.mp4`, `.m4a`, `.mp3`
@@ -79,7 +79,7 @@ A vítima Maria da Silva contou que, em novembro de 2020, deixou o carro no esta
 }
 ```
 
-- [Cheat Sheet](docs\datajud_cheat_sheet.pdf)
+- [Cheat Sheet](datajud_cheat_sheet.pdf)
 
 ---
 ## Referências
